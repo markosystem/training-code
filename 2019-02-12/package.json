@@ -1,0 +1,23 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-standard": "^12.0.0"
+  },
+  "devDependencies": {
+    "eslint": "5.13.0",
+    "eslint-config-last": "0.0.5",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.0.1",
+    "eslint-plugin-react": "7.12.4",
+    "mocha": "^5.2.0",
+    "prettier": "1.16.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Globo.com",
+  "license": "ISC"
+}
