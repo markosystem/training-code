@@ -111,13 +111,13 @@ class MainTest {
     }
 
     @Test
-    @DisplayName("to 20-02-2019 with(diaVencimento=15 and diasTributo=0) hold 15-03-2019")
+    @DisplayName("to 20-02-2019 with(diaVencimento=15 and diasTributo=2) hold 17-03-2019")
     void testMain8() {
         try {
             Calendar dateNow = Calendar.getInstance();
             dateNow.set(2019, Calendar.FEBRUARY, 20);
             Main main = new Main();
-            Assertions.assertEquals(main.main(dateNow, 15, 0), "15-03-2019");
+            Assertions.assertEquals(main.main(dateNow, 15, 2), "17-03-2019");
         } catch (Exception e) {
             e.printStackTrace();
         }

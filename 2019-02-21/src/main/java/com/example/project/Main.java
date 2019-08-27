@@ -10,6 +10,10 @@
 
 package com.example.project;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+
 public class Main {
 
     public int mod10(String numeros) {
@@ -27,7 +31,7 @@ public class Main {
             int total = proximaDezena - soma;
             return total >= 10 ? 0 : total;
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return -1;
     }
@@ -45,7 +49,7 @@ public class Main {
             int digito = 11 - (soma % 11);
             return digito >= 10 ? 1 : digito;
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
         return -1;
     }
@@ -64,6 +68,21 @@ public class Main {
             System.out.println(e);
         }
         return -1;
+    }
+
+    public String fatorVencimento(java.util.Date dataVencimento) {
+        try {
+            //07/10/1997
+            Calendar c = Calendar.getInstance();
+            c.setTime(dataVencimento);
+            LocalDate fator = LocalDate.of(1997, 10, 7);
+            LocalDate vencimento = LocalDate.of(c.get(Calendar.YEAR), c.get(Calendar.MONTH) + 1, c.get(Calendar.DAY_OF_MONTH));
+            long diferencaEmDias = ChronoUnit.DAYS.between(fator, vencimento);
+            return String.valueOf(diferencaEmDias);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }

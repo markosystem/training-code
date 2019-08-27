@@ -20,11 +20,10 @@ public class Main {
         Calendar dateNew = Calendar.getInstance();
         dateNew.setTime(calendar.getTime());
         dateNew.set(Calendar.DAY_OF_MONTH, diaVencimento);
-        if (calendar.after(dateNew)) {
+        if (calendar.after(dateNew))
             dateNew.add(Calendar.MONTH, 1);
-            output = new SimpleDateFormat("dd-MM-yyyy").format(dateNew.getTime());
-        } else
-            output = new SimpleDateFormat("dd-MM-yyyy").format(dateNew.getTime());
+        dateNew.add(Calendar.DAY_OF_MONTH, diasTributos);
+        output = new SimpleDateFormat("dd-MM-yyyy").format(dateNew.getTime());
         return output;
     }
 

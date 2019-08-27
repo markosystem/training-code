@@ -13,6 +13,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -36,14 +39,11 @@ class MainTest {
         assertEquals(9, main.mod11("0019780100000152000000002779060000003892017"));
         assertEquals(3, main.mod11("0019373700000001000500940144816060680935031"));
 
-        //id=27
         assertEquals(1, main.mod11("0019796300000525000000002779060000202019417"));
-        //id=15
         assertEquals(1, main.mod11("0019790300000525010000002779060000152019417"));
-        //id=18
         assertEquals(1, main.mod11("0019799500000524980000002779060000182019417"));
-        //id=28
         assertEquals(1, main.mod11("0019799400000525000000002779060000212019417"));
+        assertEquals(4, main.mod11("0019783400000001330000002779060000192019517"));
 
     }
 
